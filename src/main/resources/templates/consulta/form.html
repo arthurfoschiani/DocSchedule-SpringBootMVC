@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/style.css}">
+    <link rel="stylesheet" th:href="@{/consulta/form.css}">
+    <title>Doc Schedule - Consultas</title>
+</head>
+<body>
+    <header>
+        <h1>Doc Schedule</h1>
+        <h2>Agende aqui uma nova consulta</h2>
+    </header>
+
+    <form action="/consultas" method="POST">
+        <div>
+            <label for="especialidade">Especialidade</label>
+            <select name="especialidade" id="especialidade">
+                <option value="">Selecione uma Especialidade</option>
+                <option value="cardiologia">Cardiologia</option>
+                <option value="dermatologia">Dermatologia</option>
+                <option value="endocrinologia">Endocrinologia</option>
+                <option value="gastroenterologia">Gastroenterologia</option>
+                <option value="neurologia">Neurologia</option>
+                <option value="ortopedia">Ortopedia</option>
+                <option value="pediatria">Pediatria</option>
+                <option value="psiquiatria">Psiquiatria</option>
+            </select>
+        </div>
+    
+        <div>
+            <label for="motivo">Motivo</label>
+            <textarea type="text" name="motivo" id="motivo"></textarea>
+        </div>
+    
+        <div>
+            <label for="dataConsulta">Data da Consulta</label>
+            <input type="date" name="dataConsulta" id="dataConsulta">
+        </div>
+
+        <div class="box-btns">
+            <input type="submit" value="Agendar Consulta"/>
+            <a class="btn-cancelar" href="/consultas">Cancelar</a>
+        </div>
+    </form>
+</body>
+</html>

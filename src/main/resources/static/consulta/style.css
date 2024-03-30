@@ -19,12 +19,48 @@ header > h2 {
     font-weight: 400;
 }
 
+.warn {
+    display: block;
+    margin: 5vh 5vw;
+    width: calc(100% - 10vw);
+    border-radius: 4px;
+    background-color: #00a516;
+    color: #FFF;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-align: center;
+    padding: 12px 8px;
+    transition: .2s;
+    box-sizing: border-box;
+}
+
+.btn-new-consulta {
+    display: block;
+    margin: 5vh 5vw;
+    width: calc(100% - 10vw);
+    border: 2px solid #00003C;
+    background-color: #00003C;
+    border-radius: 4px;
+    color: #FFF;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-align: center;
+    padding: 12px 8px;
+    transition: .2s;
+    box-sizing: border-box;
+}
+
+.btn-new-consulta:hover {
+    color: #00003C;
+    background-color: #FFF;
+}
+
 section {
     display: flex;
     flex-wrap: wrap;
-    gap: 5vw;
-    justify-content: space-around;
-    margin: 5vh 7vw;
+    gap: 3vw;
+    justify-content: space-between;
+    margin: 5vh 5vw;
 }
 
 section > .bloco-consulta {
@@ -76,10 +112,25 @@ section > .bloco-consulta .data {
 }
 
 section > .bloco-consulta .motivo {
+    display: flex;
     font-size: 1em;
     font-weight: 400;
 }
 
-section > .bloco-consulta .motivo > span {
-    font-weight: 600;
+section > .bloco-consulta > .btns-actions {
+    display: flex;
+    gap: 16px;
+}
+
+section > .bloco-consulta > .btns-actions > a {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+section > .bloco-consulta > .btns-actions > .btn-cancelar {
+    color: #9b1111;
+}
+
+section > .bloco-consulta > .btns-actions > .btn-alterar {
+    color: #dbb300;
 }

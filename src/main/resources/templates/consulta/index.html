@@ -16,15 +16,25 @@
         <h2>Visualize aqui as suas futuras consultas marcadas</h2>
     </header>
 
+    <a class="btn-new-consulta" th:href="${'/consultas/new'}">Nova consulta</a>
+
+    <div class="warn" th:if="${message != null}">
+        <p th:text="${message}"></p>
+    </div>
+
     <section>
         <div class="bloco-consulta" th:each="consulta : ${consultas}">
             <div class="subheader">
-                <p class="especialidade" th:text="${consulta}"></p>
+                <p class="especialidade" th:text="${consulta.especialidade}"></p>
                 <p class="doutor">Dr. Arthur Foschiani</p>
             </div>
             <hr/>
-            <p class="data">24/04/2024</p>
-            <p class="motivo"><span>Motivo:</span> Check-up geral</p>
+            <p class="data" th:text="${consulta.dataConsulta}"></p>
+            <p th:text="${consulta.motivo}">Check-up geral</p>
+            <div class="btns-actions">
+                <a class="btn-cancelar" th:href="${'/consultas/delete/' + consulta.id}">Cancelar</a>
+                <a class="btn-alterar">Alterar</a>
+            </div>
         </div>
     </section>
 </body>
