@@ -12,42 +12,42 @@
 </head>
 <body>
     <header>
-        <h1>Doc Schedule</h1>
-        <h2>Agende aqui uma nova consulta</h2>
+        <h1 th:text="#{docSchedule.title}"></h1>
+        <h2 th:text="#{docSchedule.header}"></h2>
     </header>
 
     <form action="/consultas" method="POST" th:object="${consulta}">
         <div>
-            <label for="especialidade">Especialidade</label>
+            <label for="especialidade" th:text="#{form.especialidade.label}"></label>
             <select th:field="*{especialidade}" th:classappend="${#fields.hasErrors('especialidade')} ? is-erro">
-                <option value="">Selecione uma Especialidade</option>
-                <option value="cardiologia">Cardiologia</option>
-                <option value="dermatologia">Dermatologia</option>
-                <option value="endocrinologia">Endocrinologia</option>
-                <option value="gastroenterologia">Gastroenterologia</option>
-                <option value="neurologia">Neurologia</option>
-                <option value="ortopedia">Ortopedia</option>
-                <option value="pediatria">Pediatria</option>
-                <option value="psiquiatria">Psiquiatria</option>
+                <option value="" th:text="#{form.selectSpecialty}"></option>
+                <option value="cardiologia" th:text="#{form.especialidade.cardiologia}"></option>
+                <option value="dermatologia" th:text="#{form.especialidade.dermatologia}"></option>
+                <option value="endocrinologia" th:text="#{form.especialidade.endocrinologia}"></option>
+                <option value="gastroenterologia" th:text="#{form.especialidade.gastroenterologia}"></option>
+                <option value="neurologia" th:text="#{form.especialidade.neurologia}"></option>
+                <option value="ortopedia" th:text="#{form.especialidade.ortopedia}"></option>
+                <option value="pediatria" th:text="#{form.especialidade.pediatria}"></option>
+                <option value="psiquiatria" th:text="#{form.especialidade.psiquiatria}"></option>
             </select>
             <span th:errors="*{especialidade}"></span>
         </div>
     
         <div>
-            <label for="motivo">Motivo</label>
+            <label for="motivo" th:text="#{form.motivo.label}"></label>
             <textarea th:field="*{motivo}" type="text" th:classappend="${#fields.hasErrors('motivo')} ? is-erro"></textarea>
             <span th:errors="*{motivo}"></span>
         </div>
     
         <div>
-            <label for="dataConsulta">Data da Consulta</label>
+            <label for="dataConsulta" th:text="#{form.dataConsulta.label}"></label>
             <input th:field="*{dataConsulta}" type="date" th:classappend="${#fields.hasErrors('dataConsulta')} ? is-erro">
             <span th:errors="*{dataConsulta}"></span>
         </div>
 
         <div class="box-btns">
-            <input type="submit" value="Agendar Consulta"/>
-            <a class="btn-cancelar" href="/consultas">Cancelar</a>
+            <input type="submit" th:value="#{form.submit}"/>
+            <a class="btn-cancelar" href="/consultas" th:text="#{form.cancel}"></a>
         </div>
     </form>
 </body>
