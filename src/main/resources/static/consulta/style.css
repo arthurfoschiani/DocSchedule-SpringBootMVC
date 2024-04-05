@@ -122,15 +122,19 @@ section > .bloco-consulta > .btns-actions {
     gap: 16px;
 }
 
-section > .bloco-consulta > .btns-actions > a {
+section > .bloco-consulta > .btns-actions > a,
+section > .bloco-consulta > .btns-actions > form > button {
     font-size: 1em;
     font-weight: 500;
+    background-color: unset;
+    border: none;
+    cursor: pointer;
 }
 
-section > .bloco-consulta > .btns-actions > .btn-cancelar {
+section > .bloco-consulta > .btns-actions .btn-cancelar {
     color: #9b1111;
 }
 
-section > .bloco-consulta > .btns-actions > .btn-alterar {
+section > .bloco-consulta > .btns-actions .btn-alterar {
     color: #dbb300;
 }

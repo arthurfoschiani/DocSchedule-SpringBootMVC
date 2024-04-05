@@ -32,7 +32,12 @@
             <p class="data" th:text="${consulta.dataConsulta}"></p>
             <p th:text="${consulta.motivo}">Check-up geral</p>
             <div class="btns-actions">
-                <a class="btn-cancelar" th:href="${'/consultas/delete/' + consulta.id}">Cancelar</a>
+                <form th:action="${'/consultas/' + consulta.id}" method="post">
+                    <input type="hidden" name="_method" value="delete">
+                    <button class="btn-cancelar">
+                        Cancelar
+                    </button>
+                </form>
                 <a class="btn-alterar">Alterar</a>
             </div>
         </div>

@@ -52,6 +52,17 @@ form > div > input {
     font-size: 1em;
 }
 
+form > div > select.is-erro,
+form > div > textarea.is-erro,
+form > div > input.is-erro {
+    border: 2px solid #a70000;
+}
+
+form > div > span {
+    font-size: 0.8em;
+    color: #a70000;
+}
+
 form > .box-btns {
     display: flex;
     flex-direction: column;
@@ -63,6 +74,7 @@ form > .box-btns > .btn-cancelar {
     width: 100%;
     text-align: center;
     color: #a70000;
+    cursor: pointer;
 }
 
 form > .box-btns > input[type="submit"] {
