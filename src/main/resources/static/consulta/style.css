@@ -138,3 +138,13 @@ section > .bloco-consulta > .btns-actions .btn-cancelar {
 section > .bloco-consulta > .btns-actions .btn-alterar {
     color: #dbb300;
 }
+
+.btn-sair {
+    display: block;
+    width: fit-content;
+    margin: auto;
+    color: #00003C;
+    font-weight: 500;
+    padding: 0 8px 8px;
+    font-size: 1.1em;
+}

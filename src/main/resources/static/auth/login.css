@@ -1,0 +1,50 @@
+header {
+    background-color: #00003C;
+    height: 20vh;
+    padding: 3vh 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2vh;
+}
+
+header > h1 {
+    color: #FFF;
+    font-size: 2.5em;
+}
+
+header > h2 {
+    color: #bdbdbd;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.box-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    margin-top: 10vh;
+}
+
+.box-btns > a {
+    display: block;
+    margin: 0;
+    border: 2px solid #00003C;
+    background-color: #00003C;
+    border-radius: 4px;
+    color: #FFF;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-align: center;
+    padding: 12px 8px;
+    transition: .2s;
+    box-sizing: border-box;    
+}
+
+.box-btns > a:hover {
+    color: #00003C;
+    background-color: #FFF;
+}

@@ -16,7 +16,7 @@
         <h2 th:text="#{docSchedule.header}"></h2>
     </header>
 
-    <form action="/consultas" method="POST" th:object="${consulta}">
+    <form th:action="${'/consultas'}" method="POST" th:object="${consulta}">
         <div>
             <label for="especialidade" th:text="#{form.especialidade.label}"></label>
             <select th:field="*{especialidade}" th:classappend="${#fields.hasErrors('especialidade')} ? is-erro">
