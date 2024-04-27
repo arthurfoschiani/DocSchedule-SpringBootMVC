@@ -1,0 +1,37 @@
+header {
+    background-color: #00003C;
+    height: 20vh;
+    padding: 3vh 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2vh;
+}
+
+header > h1 {
+    color: #FFF;
+    font-size: 2.5em;
+}
+
+header > h2 {
+    color: #bdbdbd;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+section {
+    text-align: center;
+    margin: auto;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+}
+
+section > h3{
+    font-size: 2em;
+}
+
+section > p{
+    font-size: 1.2em;
+}

@@ -12,6 +12,16 @@
 </head>
 <body>
 
+    <nav>
+        <div class="inline">
+            <img th:src="${avatar}" alt="avatar do usuário" class="nes-avatar is-medium is-rounded">
+            <p th:text="${user}"></p>
+        </div>
+        <a href="/logout" class="nes-btn">
+            sair
+        </a>
+    </nav>
+
     <header>
         <h1>Doc Schedule</h1>
         <h2>Visualize aqui as suas futuras consultas marcadas</h2>

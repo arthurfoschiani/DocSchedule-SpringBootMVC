@@ -25,14 +25,14 @@ public class ConsultaService {
     UserRepository userRepository;
 
     public List<ConsultaDTO> findAllConsultas(DefaultOAuth2User user) {
-        User loggedUser = new User(user);
-        List<Consulta> consultas = repository.findAll();
-        log.info("Consultas encontradas para o usuário {}: {}", loggedUser.getId(), consultas);
-
+        String email = user.getAttribute("email");
+        Optional<User> optionalUser = userRepository.findByEmail(email);
+        List<Consulta> consultas = repository.findAllByUser(optionalUser.get());
         if (consultas.isEmpty()) {
-            log.info("Nenhuma consulta encontrada para o usuário {}", loggedUser.getId());
+            log.info("Nenhuma consulta encontrada para o usuário {}", optionalUser.get().getId());
             return Collections.emptyList();
         } else {
+            log.info("Consultas encontradas para o usuário {}: {}", optionalUser.get().getId(), consultas);
             return convertConsultasToDto(consultas);
         }
     }
